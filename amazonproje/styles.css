@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Bu, sayfanın tamamını kaplamak için gerekli */
+}
+
+header {
+    background-color: #232f3e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::before {
+    content: ''; /* Pseudo-element içeriği */
+    position: absolute;
+    bottom: -5px; /* Alt kenara göre ayarlama */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Kenarlık kalınlığı */
+    background-color: transparent; /* Başlangıçta görünmez */
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+nav ul li a:hover {
+    color: #febd69; /* Üzerine gelindiğinde renk değişimi */
+}
+nav ul li a:hover::before {
+    background-color: #febd69; /* Üzerine gelindiğinde kenarlık rengi */
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+
+
+}
+
+.search-bar button {
+    padding: 7px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ffa500; /* Üzerine gelindiğinde arka plan rengini değiştir */
+}
+
+main {
+    flex: 1; /* Bu, footer'ın sayfanın en altında kalmasını sağlar */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #b12704;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background-color: #febd69;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #ffa500; /* Butona gelindiğinde arka plan rengini değiştir */
+}
+
+
+/* İletişim formu */
+#contact {
+    margin-top: 40px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #ffa500;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-bar, .right-bar {
+    flex: 1;
+}
+
+.content {
+    flex: 3;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
